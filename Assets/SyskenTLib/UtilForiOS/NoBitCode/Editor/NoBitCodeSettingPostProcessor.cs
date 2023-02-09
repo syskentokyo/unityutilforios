@@ -1,3 +1,4 @@
+using SyskenTLib.UtilForiOS.CommonConfig.Editor;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
@@ -18,27 +19,35 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
         [PostProcessBuild]
         public static void OnPostProcessBuild(BuildTarget buildTarget, string path)
         {
-            
-            if (buildTarget== BuildTarget.iOS)
+
+            if (buildTarget == BuildTarget.iOS)
             {
-                string projectPath = path + "/Unity-iPhone.xcodeproj/project.pbxproj";
-                PBXProject pbxProject = new PBXProject();
-                pbxProject.ReadFromFile(projectPath);
-                
-                //Main
-                string target = pbxProject.GetUnityMainTargetGuid();
-                pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
+                SsaveDataManager ssaveDataManager = new SsaveDataManager();
+                SaveDataJSON currentConfigJSON = ssaveDataManager.ReadProjectCommonConfig();
 
-                //テスト用
-                target = pbxProject.TargetGuidByName(PBXProject.GetUnityTestTargetName());
-                pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
-                
-                //Unity Framework
-                target = pbxProject.GetUnityFrameworkTargetGuid();
-                pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
+                if (currentConfigJSON.isAutoTurnAffBitCode){
 
 
-                pbxProject.WriteToFile(projectPath);
+
+                    string projectPath = path + "/Unity-iPhone.xcodeproj/project.pbxproj";
+                    PBXProject pbxProject = new PBXProject();
+                    pbxProject.ReadFromFile(projectPath);
+
+                    //Main
+                    string target = pbxProject.GetUnityMainTargetGuid();
+                    pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
+
+                    //テスト用
+                    target = pbxProject.TargetGuidByName(PBXProject.GetUnityTestTargetName());
+                    pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
+
+                    //Unity Framework
+                    target = pbxProject.GetUnityFrameworkTargetGuid();
+                    pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
+
+
+                    pbxProject.WriteToFile(projectPath);
+                }
             }
         }
     }

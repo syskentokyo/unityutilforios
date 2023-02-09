@@ -1,9 +1,7 @@
 {
-    "name": "NoBitCodeEditor",
-    "rootNamespace": "SyskenTLib.UtilForiOS.NoBitcodeEditor",
-    "references": [
-        "GUID:cddf9fccaf61f47dc9af28711cda4fbd"
-    ],
+    "name": "CommonConfig",
+    "rootNamespace": "SyskenTLib.UtilForiOS.CommonConfig.Editor",
+    "references": [],
     "includePlatforms": [
         "Editor"
     ],
