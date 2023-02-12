@@ -1,0 +1,22 @@
+{
+    "saveDateText": "20230213031802",
+    "isAutoTurnAffBitCode": false,
+    "isOverrideCameraUsage": false,
+    "cameraUsageDescription": "",
+    "isOverrideLocationWhenAlwaysAndUseUsage": false,
+    "locationUsageWhenAlwaysAndUseDescription": "",
+    "isOverrideLocationWhenUseUsage": false,
+    "locationUsageWhenUseDescription": "",
+    "isOverrideLocationWhenAlwaysUsage": false,
+    "locationUsageWhenAlwaysDescription": "",
+    "isOverrideLocalNetworkUsage": false,
+    "localNetworkUsageDescription": "",
+    "isOverrideBluetoothAlwaysUsage": false,
+    "bluetoothAlwaysUsageDescription": "",
+    "isOverrideNFCScanUsage": false,
+    "nfcScanUsageDescription": "",
+    "isOverridePhotoLibraryAddUsage": false,
+    "photoLibraryAddUsageDescription": "",
+    "isOverridePhotoLibraryUsage": false,
+    "photoLibraryUsageDescription": ""
+}

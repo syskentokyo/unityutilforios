@@ -37,17 +37,23 @@ namespace SyskenTLib.UtilForiOS.CommonConfig.Editor
             //固定
             EditorGUILayout.BeginHorizontal("Box");
             
-            if (GUILayout.Button("Read"))
+            EditorGUILayout.Space(10);
+            
+            if (GUILayout.Button("Read",GUILayout.Width(100)))
             {
             
                 //設定読み込み
                 ReadConfig();
             }
-            
-            if (GUILayout.Button("Save"))
+
+            Color currentColor = GUI.color;
+            GUI.color = Color.red;
+            if (GUILayout.Button("Save",GUILayout.Width(100)))
             {
                 SaveConfig();
             }
+
+            GUI.color = currentColor;
             
                         
             EditorGUILayout.EndHorizontal();
@@ -60,9 +66,16 @@ namespace SyskenTLib.UtilForiOS.CommonConfig.Editor
             
             EditorGUILayout.BeginVertical("Box");
             
+            EditorGUILayout.Space(5);
+            EditorGUILayout.LabelField("*1 Save To 0_config.json");
+            EditorGUILayout.LabelField("*2 See infoplistconfig for info.plist edits");
             
-            
+            EditorGUILayout.Space(15);
+
+
             _currentIsAutoTurnAffBitCode = EditorGUILayout.Toggle ("AutoTurnOffBitCode", _currentIsAutoTurnAffBitCode);
+            
+            
             
             
             

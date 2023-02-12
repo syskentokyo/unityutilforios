@@ -7,11 +7,10 @@ namespace SyskenTLib.UtilForiOS.CommonConfig.Editor
     public class SsaveDataManager
     {
         
-     private readonly string SAVE_DIR_PATH = "/../SyskenTLibSetting";
-     private readonly string SAVE_FILE_NAME = "utilforios_save.json";
+     private readonly string SAVE_DIR_PATH = "/SyskenTLib/UtilForiOS";
+     private readonly string SAVE_FILE_NAME = "0_config.json";
 
-
-     private readonly string SAVE_VALUE_NODATA = "nodata";
+     
         
         private string GetCurrentDate()
         {
@@ -73,7 +72,7 @@ namespace SyskenTLib.UtilForiOS.CommonConfig.Editor
 
             saveJSON.saveDateText = saveValue;
             
-            string jsonText  = JsonUtility.ToJson (saveJSON);
+            string jsonText  = JsonUtility.ToJson (saveJSON,true);
 
             if (Directory.Exists(GetProjectCommonConfigDirPath())==false)
             {
