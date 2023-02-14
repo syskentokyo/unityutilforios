@@ -1,0 +1,16 @@
+{
+    "name": "Demo",
+    "rootNamespace": "SyskenTLib.UtilForiOS.Demo",
+    "references": [
+        "GUID:4ecf9a96e617441c1858b2183daa56f6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
