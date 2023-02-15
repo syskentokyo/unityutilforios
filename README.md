@@ -9,8 +9,14 @@ iOS用の細かい機能の集合ライブラリです
 
 * noBitCode
     * ビルド時にBitCodeを自動でオフにする機能
+
+
 * InfoPlistConfig
     * ビルド時に、InfoPlistへの権限などの設定を自動で行う機能
+
+
+* Cameralight
+  * 端末のライトのオン、オフができます
 
 
 # ライセンス
