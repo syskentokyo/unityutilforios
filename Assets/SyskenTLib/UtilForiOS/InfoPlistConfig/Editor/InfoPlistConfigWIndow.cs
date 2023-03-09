@@ -39,6 +39,8 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
         private bool isOverridePhotoLibraryAddUsage = false;
         private string photoLibraryAddUsageDescription = "";
         
+        private bool isOverrideEnableOpenFileFromFinder = false;
+        
 
         [MenuItem("SyskenTLib/UtilForiOS/InfoPlistConfig", priority = 10)]
         private static void ShowWindow()
@@ -138,7 +140,10 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
             EditorGUILayout.Space(5);
             isOverridePhotoLibraryAddUsage = EditorGUILayout.Toggle("OverridePhotoLibraryAddUsage", isOverridePhotoLibraryAddUsage);
             photoLibraryAddUsageDescription = EditorGUILayout.TextField("PhotoLibraryAddUsageDescription", photoLibraryAddUsageDescription);
-
+            
+            EditorGUILayout.Space(5);
+            isOverrideEnableOpenFileFromFinder = EditorGUILayout.Toggle("EnableOpenFileFromFinder", isOverrideEnableOpenFileFromFinder);
+        
 
             
 
@@ -179,6 +184,8 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
             
             isOverridePhotoLibraryAddUsage = currentConfigJSON.isOverridePhotoLibraryAddUsage;
             photoLibraryAddUsageDescription = currentConfigJSON.photoLibraryAddUsageDescription;
+            
+            isOverrideEnableOpenFileFromFinder = currentConfigJSON.isOverrideEnableOpenFileFromFinder;
 
         }
 
@@ -215,7 +222,9 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
             currentConfigJSON.isOverridePhotoLibraryAddUsage = isOverridePhotoLibraryAddUsage;
             currentConfigJSON.photoLibraryAddUsageDescription = photoLibraryAddUsageDescription;
 
-
+            currentConfigJSON.isOverrideEnableOpenFileFromFinder = isOverrideEnableOpenFileFromFinder;
+            
+            
             //保存
             ssaveDataManager.SaveProjectCommonConfig(currentConfigJSON);
 

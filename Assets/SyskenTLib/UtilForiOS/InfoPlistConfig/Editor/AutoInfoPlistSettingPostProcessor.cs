@@ -66,6 +66,11 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
                     plist.root.SetString("NSPhotoLibraryUsageDescription", currentConfigJSON.photoLibraryUsageDescription);
                 }
                 
+                if (currentConfigJSON.isOverrideEnableOpenFileFromFinder){
+                    plist.root.SetBoolean("UIFileSharingEnabled",true);
+                    plist.root.SetBoolean("LSSupportsOpeningDocumentsInPlace",true);
+                }
+                
                 
                 //InfoPlist保存
                 File.WriteAllText(plistPath, plist.WriteToString());

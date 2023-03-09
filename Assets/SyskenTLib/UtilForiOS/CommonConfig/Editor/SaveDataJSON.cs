@@ -38,5 +38,7 @@ namespace SyskenTLib.UtilForiOS.CommonConfig.Editor
         
         public bool isOverridePhotoLibraryUsage = false;
         public string photoLibraryUsageDescription = "";
+        
+        public bool isOverrideEnableOpenFileFromFinder = false;
     }
 }
