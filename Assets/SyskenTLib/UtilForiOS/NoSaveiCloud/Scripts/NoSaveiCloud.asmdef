@@ -1,0 +1,17 @@
+{
+    "name": "NoSaveiCloud",
+    "rootNamespace": "SyskenTLib.UtilForiOS.NoSaveiCloud",
+    "references": [],
+    "includePlatforms": [
+        "Editor",
+        "iOS"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,5 +1,5 @@
 {
-    "saveDateText": "20230213032517",
+    "saveDateText": "20230310025129",
     "isAutoTurnAffBitCode": false,
     "isOverrideCameraUsage": false,
     "cameraUsageDescription": "",
@@ -18,5 +18,6 @@
     "isOverridePhotoLibraryAddUsage": false,
     "photoLibraryAddUsageDescription": "",
     "isOverridePhotoLibraryUsage": false,
-    "photoLibraryUsageDescription": ""
+    "photoLibraryUsageDescription": "",
+    "isOverrideEnableOpenFileFromFinder": true
 }
