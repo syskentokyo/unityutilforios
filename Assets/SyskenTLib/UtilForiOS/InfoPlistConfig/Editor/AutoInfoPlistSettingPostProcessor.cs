@@ -21,56 +21,69 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
 
             if (buildTarget == BuildTarget.iOS)
             {
-                SsaveDataManager ssaveDataManager = new SsaveDataManager();
-                SaveDataJSON currentConfigJSON = ssaveDataManager.ReadProjectCommonConfig();
+                SaveDataManager saveDataManager = new SaveDataManager();
+                SyskenTLibUtilForiOSConfig config = saveDataManager.GetConfig();
 
+                string logTxt = "InfoPlist書き換え\n";
 
 
                 string plistPath = path + "/Info.plist";
                 var plist = new PlistDocument();
                 plist.ReadFromString(File.ReadAllText(plistPath));
                 
-                if (currentConfigJSON.isOverrideCameraUsage){
-                    plist.root.SetString("NSCameraUsageDescription", currentConfigJSON.cameraUsageDescription);
+                if (config.isOverrideCameraUsage){
+                    plist.root.SetString("NSCameraUsageDescription", config.cameraUsageDescription);
+                    logTxt += "NSCameraUsageDescription " + config.cameraUsageDescription + "\n";
                 }
 
-                if (currentConfigJSON.isOverrideLocationWhenAlwaysAndUseUsage){
-                    plist.root.SetString("NSLocationAlwaysAndWhenInUseUsageDescription", currentConfigJSON.locationUsageWhenAlwaysAndUseDescription);
+                if (config.isOverrideLocationWhenAlwaysAndUseUsage){
+                    plist.root.SetString("NSLocationAlwaysAndWhenInUseUsageDescription", config.locationUsageWhenAlwaysAndUseDescription);
+                    logTxt += "NSLocationAlwaysAndWhenInUseUsageDescription " + config.locationUsageWhenAlwaysAndUseDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverrideLocationWhenUseUsage){
-                    plist.root.SetString("NSLocationWhenInUseUsageDescription", currentConfigJSON.locationUsageWhenUseDescription);
+                if (config.isOverrideLocationWhenUseUsage){
+                    plist.root.SetString("NSLocationWhenInUseUsageDescription", config.locationUsageWhenUseDescription);
+                    logTxt += "NSLocationWhenInUseUsageDescription " + config.locationUsageWhenUseDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverrideLocationWhenAlwaysUsage){
-                    plist.root.SetString("NSLocationAlwaysUsageDescription", currentConfigJSON.locationUsageWhenAlwaysDescription);
+                if (config.isOverrideLocationWhenAlwaysUsage){
+                    plist.root.SetString("NSLocationAlwaysUsageDescription", config.locationUsageWhenAlwaysDescription);
+                    logTxt += "NSLocationAlwaysUsageDescription " + config.locationUsageWhenAlwaysDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverrideLocalNetworkUsage){
-                    plist.root.SetString("NSLocalNetworkUsageDescription", currentConfigJSON.localNetworkUsageDescription);
+                if (config.isOverrideLocalNetworkUsage){
+                    plist.root.SetString("NSLocalNetworkUsageDescription", config.localNetworkUsageDescription);
+                    logTxt += "NSLocalNetworkUsageDescription " + config.localNetworkUsageDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverrideBluetoothAlwaysUsage){
-                    plist.root.SetString("NSBluetoothAlwaysUsageDescription", currentConfigJSON.bluetoothAlwaysUsageDescription);
+                if (config.isOverrideBluetoothAlwaysUsage){
+                    plist.root.SetString("NSBluetoothAlwaysUsageDescription", config.bluetoothAlwaysUsageDescription);
+                    logTxt += "NSBluetoothAlwaysUsageDescription " + config.bluetoothAlwaysUsageDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverrideNFCScanUsage){
-                    plist.root.SetString("NFCReaderUsageDescription", currentConfigJSON.nfcScanUsageDescription);
+                if (config.isOverrideNFCScanUsage){
+                    plist.root.SetString("NFCReaderUsageDescription", config.nfcScanUsageDescription);
+                    logTxt += "NFCReaderUsageDescription " + config.nfcScanUsageDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverridePhotoLibraryAddUsage){
-                    plist.root.SetString("NSPhotoLibraryAddUsageDescription", currentConfigJSON.photoLibraryAddUsageDescription);
+                if (config.isOverridePhotoLibraryAddUsage){
+                    plist.root.SetString("NSPhotoLibraryAddUsageDescription", config.photoLibraryAddUsageDescription);
+                    logTxt += "NSPhotoLibraryAddUsageDescription " + config.photoLibraryAddUsageDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverridePhotoLibraryUsage){
-                    plist.root.SetString("NSPhotoLibraryUsageDescription", currentConfigJSON.photoLibraryUsageDescription);
+                if (config.isOverridePhotoLibraryUsage){
+                    plist.root.SetString("NSPhotoLibraryUsageDescription", config.photoLibraryUsageDescription);
+                    logTxt += "NSPhotoLibraryUsageDescription " + config.photoLibraryUsageDescription + "\n";
                 }
                 
-                if (currentConfigJSON.isOverrideEnableOpenFileFromFinder){
+                if (config.isOverrideEnableOpenFileFromFinder){
                     plist.root.SetBoolean("UIFileSharingEnabled",true);
                     plist.root.SetBoolean("LSSupportsOpeningDocumentsInPlace",true);
+                    logTxt += "UIFileSharingEnabled " + "true" + "\n";
+                    logTxt += "LSSupportsOpeningDocumentsInPlace " + "true" + "\n";
                 }
                 
+                Debug.Log(logTxt);
                 
                 //InfoPlist保存
                 File.WriteAllText(plistPath, plist.WriteToString());

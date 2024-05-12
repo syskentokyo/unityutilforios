@@ -22,10 +22,10 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
 
             if (buildTarget == BuildTarget.iOS)
             {
-                SsaveDataManager ssaveDataManager = new SsaveDataManager();
-                SaveDataJSON currentConfigJSON = ssaveDataManager.ReadProjectCommonConfig();
+                SaveDataManager saveDataManager = new SaveDataManager();
+                SyskenTLibUtilForiOSConfig config = saveDataManager.GetConfig();
 
-                if (currentConfigJSON.isAutoTurnAffBitCode){
+                if (config.isAutoTurnOffBitCode){
 
 
 
@@ -45,6 +45,7 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
                     target = pbxProject.GetUnityFrameworkTargetGuid();
                     pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
 
+                    Debug.Log("BitCode Off");
 
                     pbxProject.WriteToFile(projectPath);
                 }
