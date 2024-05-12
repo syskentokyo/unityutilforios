@@ -1,10 +1,7 @@
 {
-    "name": "SyskenTLibUtilForiOSDemo",
-    "rootNamespace": "SyskenTLib.UtilForiOS.Demo",
-    "references": [
-        "GUID:4ecf9a96e617441c1858b2183daa56f6",
-        "GUID:6d21dcbfd03074316bb59050a5ee450d"
-    ],
+    "name": "SyskenTLibUtilForiOSKeyChain",
+    "rootNamespace": "SyskenTLib.UtilForiOS.CustomKeychain",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
