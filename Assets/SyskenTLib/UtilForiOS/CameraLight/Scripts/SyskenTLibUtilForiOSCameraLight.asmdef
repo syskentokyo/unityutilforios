@@ -1,11 +1,10 @@
 {
-    "name": "NoBitCodeEditor",
-    "rootNamespace": "SyskenTLib.UtilForiOS.NoBitcodeEditor",
-    "references": [
-        "GUID:cddf9fccaf61f47dc9af28711cda4fbd"
-    ],
+    "name": "SyskenTLibUtilForiOSCameraLight",
+    "rootNamespace": "SyskenTLib.UtilForiOS.CameraLight",
+    "references": [],
     "includePlatforms": [
-        "Editor"
+        "Editor",
+        "iOS"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

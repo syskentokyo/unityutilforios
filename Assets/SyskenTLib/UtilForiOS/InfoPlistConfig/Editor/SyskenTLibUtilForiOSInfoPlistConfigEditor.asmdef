@@ -1,10 +1,11 @@
 {
-    "name": "NoSaveiCloud",
-    "rootNamespace": "SyskenTLib.UtilForiOS.NoSaveiCloud",
-    "references": [],
+    "name": "SyskenTLibUtilForiOSInfoPlistConfigEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cddf9fccaf61f47dc9af28711cda4fbd"
+    ],
     "includePlatforms": [
-        "Editor",
-        "iOS"
+        "Editor"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

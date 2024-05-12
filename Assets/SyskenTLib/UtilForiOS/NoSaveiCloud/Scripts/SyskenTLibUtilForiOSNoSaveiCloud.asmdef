@@ -1,6 +1,6 @@
 {
-    "name": "CameraLight",
-    "rootNamespace": "SyskenTLib.UtilForiOS.CameraLight",
+    "name": "SyskenTLibUtilForiOSNoSaveiCloud",
+    "rootNamespace": "SyskenTLib.UtilForiOS.NoSaveiCloud",
     "references": [],
     "includePlatforms": [
         "Editor",

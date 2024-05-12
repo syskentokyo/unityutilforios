@@ -1,10 +1,12 @@
 {
-    "name": "Demo",
-    "rootNamespace": "SyskenTLib.UtilForiOS.Demo",
+    "name": "SyskenTLibUtilForiOSNoBitCodeEditor",
+    "rootNamespace": "SyskenTLib.UtilForiOS.NoBitcodeEditor",
     "references": [
-        "GUID:4ecf9a96e617441c1858b2183daa56f6"
+        "GUID:cddf9fccaf61f47dc9af28711cda4fbd"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

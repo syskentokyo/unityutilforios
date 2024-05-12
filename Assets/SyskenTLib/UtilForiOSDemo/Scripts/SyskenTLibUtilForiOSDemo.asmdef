@@ -1,12 +1,10 @@
 {
-    "name": "InfoPlistConfigEditor",
-    "rootNamespace": "",
+    "name": "SyskenTLibUtilForiOSDemo",
+    "rootNamespace": "SyskenTLib.UtilForiOS.Demo",
     "references": [
-        "GUID:cddf9fccaf61f47dc9af28711cda4fbd"
+        "GUID:4ecf9a96e617441c1858b2183daa56f6"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
