@@ -61,6 +61,40 @@ namespace SyskenTLib.UtilForiOS.Demo
                     _vibrateManager.PrepareVibrate(2,0);
                     _vibrateManager.PlayVibrate(2,2,100);
                     break;
+                case 9:
+                    _vibrateManager.PlayVibrate(3,0,100);
+                    break;
+                case 10:
+                    _vibrateManager.PlayVibrate(3,1,100);
+                    break;
+                case 11:
+                    _vibrateManager.PlayVibrate(3,2,100);
+                    break;
+                case 12:
+                    _vibrateManager.PlayVibrate(3,3,100);
+                    break;
+                case 13:
+                    _vibrateManager.PlayVibrate(3,4,100);
+                    break;
+                case 14:
+                    _vibrateManager.PlayVibrate(3,5,100);
+                    break;
+                case 15:
+                    _vibrateManager.PlayVibrate(3,6,100);
+                    break;
+                case 16:
+                    _vibrateManager.PlayVibrate(3,7,100);
+                    break;
+                case 17:
+                    _vibrateManager.PlayVibrate(3,8,100);
+                    break;
+                case 18:
+                    _vibrateManager.PlayVibrate(3,9,100);
+                    break;
+                case 19:
+                    _vibrateManager.PlayVibrate(3,10,100);
+                    break;
+
             }
         }
     }
