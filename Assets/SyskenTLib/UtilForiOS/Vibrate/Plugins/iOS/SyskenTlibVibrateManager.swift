@@ -149,36 +149,9 @@ class SyskenTlibVibrateManager{
             case 0:
                 do {
                 
-                    let param1:[CHHapticEventParameter] = createParamForHapticeEngine(intensity: 1.0
-                                                                                      , sharpness: 1.0
-                                                                                      , sustained: 1.0
-                                                                                      , attackTime: 0.0
-                                                                                      , decayTime: 0.1
-                                                                                      , releaseTime: 0.0)
-                    let event1 = CHHapticEvent(eventType: .hapticTransient
-                                              , parameters:param1
-                                              , relativeTime: 0)
-                    
-                    let param2:[CHHapticEventParameter] = createParamForHapticeEngine(intensity: 0.7
-                                                                                      , sharpness: 1.0
-                                                                                      , sustained: 1.0
-                                                                                      , attackTime: 0.0
-                                                                                      , decayTime: 0.1
-                                                                                      , releaseTime: 0.0)
-                    let event2 = CHHapticEvent(eventType: .hapticTransient
-                                              , parameters:param2
-                                               , relativeTime: 0.32)
-                    
-                    let param3:[CHHapticEventParameter] = createParamForHapticeEngine(intensity: 1.0
-                                                                                      , sharpness: 1.0
-                                                                                      , sustained: 1.0
-                                                                                      , attackTime: 0.0
-                                                                                      , decayTime: 0.1
-                                                                                      , releaseTime: 0.0)
-                    let event3 = CHHapticEvent(eventType: .hapticTransient
-                                              , parameters:param3
-                                               , relativeTime: 0.63)
-                    
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.1)
+                    let event3 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.13)
                     
                     playVibrateOnHapticeEngine(events: [event1,event2,event3],dynamicParmeters: [])
       
@@ -186,9 +159,129 @@ class SyskenTlibVibrateManager{
                 
                 break
             case 1:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.03)
+                    let event3 = selectEventForHapticeEngine(paramNum: 3,relativeTime: 0.09)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3],dynamicParmeters: [])
+      
+                }
                 
                 break
             case 2:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.1)
+                    let event3 = selectEventForHapticeEngine(paramNum: 101,relativeTime: 0.43)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3],dynamicParmeters: [])
+      
+                }
+                
+                break
+                
+                
+            case 3:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.10)
+                    let event2 = selectEventForHapticeEngine(paramNum: 104,relativeTime: 0.1)
+                    let event3 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.12)
+                    let event4 = selectEventForHapticeEngine(paramNum: 104,relativeTime: 0.22)
+                    let event5 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.33)
+                    let event6 = selectEventForHapticeEngine(paramNum: 104,relativeTime: 0.44)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6],dynamicParmeters: [])
+      
+                }
+                
+                break
+                
+                
+            case 4:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.03)
+                    let event3 = selectEventForHapticeEngine(paramNum: 101,relativeTime: 0.07)
+                    let event4 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.09)
+                    let event5 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.13)
+                    let event6 = selectEventForHapticeEngine(paramNum: 101,relativeTime: 0.15)
+                    let event7 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.18)
+                    let event8 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.2)
+                    let event9 = selectEventForHapticeEngine(paramNum: 101,relativeTime: 0.23)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+      
+                }
+                
+                break
+                
+            case 5:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 5,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 6,relativeTime: 0.1)
+                    let event3 = selectEventForHapticeEngine(paramNum: 7,relativeTime: 0.43)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3],dynamicParmeters: [])
+      
+                }
+                
+                break
+                
+            case 6:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.03)
+                    let event3 = selectEventForHapticeEngine(paramNum: 101,relativeTime: 0.07)
+                    let event4 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.09)
+                    let event5 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.13)
+                    let event6 = selectEventForHapticeEngine(paramNum: 105,relativeTime: 0.15)
+                    let event7 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.18)
+                    let event8 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.2)
+                    let event9 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.23)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+            case 7:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.03)
+                    let event3 = selectEventForHapticeEngine(paramNum: 101,relativeTime: 0.07)
+                    let event4 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.09)
+                    let event5 = selectEventForHapticeEngine(paramNum: 102,relativeTime: 0.13)
+                    let event6 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.15)
+                    let event7 = selectEventForHapticeEngine(paramNum: 102,relativeTime: 0.3)
+                    let event8 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.5)
+                    let event9 = selectEventForHapticeEngine(paramNum: 103,relativeTime: 0.8)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+            case 8:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 0,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 3,relativeTime: 0.03)
+                    let event3 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.07)
+                    let event4 = selectEventForHapticeEngine(paramNum: 3,relativeTime: 0.09)
+                    let event5 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.13)
+                    let event6 = selectEventForHapticeEngine(paramNum: 6,relativeTime: 0.15)
+                    let event7 = selectEventForHapticeEngine(paramNum: 5,relativeTime: 0.3)
+                    let event8 = selectEventForHapticeEngine(paramNum: 6,relativeTime: 0.5)
+                    let event9 = selectEventForHapticeEngine(paramNum: 5,relativeTime: 0.8)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
                 
                 break
             default:
@@ -196,6 +289,233 @@ class SyskenTlibVibrateManager{
             }
         
         }
+    
+    
+    private func selectEventForHapticeEngine(paramNum:Int,relativeTime:Float)->CHHapticEvent{
+        
+        var paramHapticEvent:CHHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:[]
+                                                                , relativeTime: 0.0)
+        
+        switch paramNum {
+        case 0:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 0)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+        case 1:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 1)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+        case 2:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 2)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+        case 3:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 3)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+            
+        case 4:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 4)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+        case 5:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 5)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+        case 6:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 6)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+        case 7:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 7)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticTransient
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime))
+            break
+            
+            //
+            // 継続系
+            //
+        case 100:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 0)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                            ,duration: TimeInterval(relativeTime/2))
+            break
+        case 101:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 1)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+            
+        case 102:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 2)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+            
+        case 103:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 3)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+            
+        case 104:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 4)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+            
+        case 105:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 5)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+        case 106:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 6)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+        case 107:
+            let param:[CHHapticEventParameter] = selectParamForHapticeEngine(paramNum: 7)
+            paramHapticEvent = CHHapticEvent(eventType: .hapticContinuous
+                                                                , parameters:param
+                                             , relativeTime: TimeInterval(relativeTime)
+                                             ,duration: TimeInterval(relativeTime/2))
+            break
+            
+            
+            
+            
+            
+            
+            
+            
+        default:
+            break
+        }
+        
+        
+        
+        
+        return paramHapticEvent
+    }
+    
+    
+    /// パラメータ一覧から選ぶ
+    /// - Parameter paramNum:
+    /// - Returns:
+    private func selectParamForHapticeEngine(paramNum:Int)->[CHHapticEventParameter]{
+        var param:[CHHapticEventParameter] = [];
+        
+        
+        switch paramNum {
+        case 0:
+            param = createParamForHapticeEngine(intensity: 1.0
+                                                , sharpness: 1.0
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.1
+                                                , releaseTime: 0.0)
+            break
+        case 1:
+            param = createParamForHapticeEngine(intensity: 0.2
+                                                , sharpness: 1.0
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.1
+                                                , releaseTime: 0.0)
+            break
+        case 2:
+            param = createParamForHapticeEngine(intensity: 0.2
+                                                , sharpness: 0.3
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.1
+                                                , releaseTime: 0.0)
+            break
+        case 3:
+            param = createParamForHapticeEngine(intensity: 0.8
+                                                , sharpness: 1.0
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.03
+                                                , releaseTime: 0.0)
+            break
+        case 4:
+            param = createParamForHapticeEngine(intensity: 0.5
+                                                , sharpness: 0.5
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.1
+                                                , releaseTime: 0.0)
+            break
+            
+        case 5:
+            param = createParamForHapticeEngine(intensity: 0.1
+                                                , sharpness: 0.1
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.03
+                                                , releaseTime: 0.01)
+            break
+            
+        case 6:
+            param = createParamForHapticeEngine(intensity: 1.0
+                                                , sharpness: 0.1
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.1
+                                                , releaseTime: 0.0)
+            break
+            
+        case 7:
+            param = createParamForHapticeEngine(intensity: 0.01
+                                                , sharpness: 1.0
+                                                , sustained: 1.0
+                                                , attackTime: 0.0
+                                                , decayTime: 0.06
+                                                , releaseTime: 0.0)
+            break
+            
+        default:
+            break
+        }
+        
+        
+        
+        
+        return param
+        
+    }
 
     
     private func createParamForHapticeEngine(intensity:Float
@@ -222,7 +542,7 @@ class SyskenTlibVibrateManager{
         
         return params
     }
-    
+        
     
     /// HapticEngine上で再生します
     /// - Parameters:
@@ -233,12 +553,26 @@ class SyskenTlibVibrateManager{
             do {
                 
                 currenthapticEngine = try CHHapticEngine()
+
+                
                 try currenthapticEngine?.start()
             } catch {
                 return
             }
         }
         
+        
+        currenthapticEngine?.stoppedHandler = { reason in
+            //停止したとき
+            //端末スリープすると、停止するようです。
+            //復帰できるようにエンジンを開放しておく
+            self.currenthapticEngine=nil
+        }
+        
+        
+        
+       
+
         
         do {
             let hapticPattern = try CHHapticPattern(events: events, parameters: dynamicParmeters)
