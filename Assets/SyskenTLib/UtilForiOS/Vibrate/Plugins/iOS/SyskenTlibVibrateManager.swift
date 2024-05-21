@@ -431,6 +431,96 @@ class SyskenTlibVibrateManager{
                 
                 break
                 
+            case 17:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.13)
+                    let event3 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.26)
+                    let event4 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.39)
+                    let event5 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.42)
+                    let event6 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.55)
+                    let event7 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.68)
+                    let event8 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.71)
+                    let event9 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.84)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+                
+                
+            case 18:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.10)
+                    let event3 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.20)
+                    let event4 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.30)
+                    let event5 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.40)
+                    let event6 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.50)
+                    let event7 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.60)
+                    let event8 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.70)
+                    let event9 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.80)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+                
+            case 19:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 9,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.10)
+                    let event3 = selectEventForHapticeEngine(paramNum: 9,relativeTime: 0.20)
+                    let event4 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.30)
+                    let event5 = selectEventForHapticeEngine(paramNum: 9,relativeTime: 0.40)
+                    let event6 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.50)
+                    let event7 = selectEventForHapticeEngine(paramNum: 9,relativeTime: 0.60)
+                    let event8 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.70)
+                    let event9 = selectEventForHapticeEngine(paramNum: 9,relativeTime: 0.80)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+                
+            case 20:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.10)
+                    let event3 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.20)
+                    let event4 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.30)
+                    let event5 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.40)
+                    let event6 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.50)
+                    let event7 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.60)
+                    let event8 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.70)
+                    let event9 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.80)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+            case 21:
+                do {
+                
+                    let event1 = selectEventForHapticeEngine(paramNum: 1,relativeTime: 0.0)
+                    let event2 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.10)
+                    let event3 = selectEventForHapticeEngine(paramNum: 4,relativeTime: 0.20)
+                    let event4 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.30)
+                    let event5 = selectEventForHapticeEngine(paramNum: 9,relativeTime: 0.40)
+                    let event6 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.50)
+                    let event7 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.60)
+                    let event8 = selectEventForHapticeEngine(paramNum: 2,relativeTime: 0.70)
+                    let event9 = selectEventForHapticeEngine(paramNum: 10,relativeTime: 0.80)
+                    
+                    playVibrateOnHapticeEngine(events: [event1,event2,event3,event4,event5,event6,event7,event8,event9],dynamicParmeters: [])
+                }
+                
+                break
+                
             default:
                 break
             }
