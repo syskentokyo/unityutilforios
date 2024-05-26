@@ -148,7 +148,7 @@ namespace SyskenTLib.UtilForiOS.Demo
         {
             Rect logRect = new Rect(40, 200, 800, 300);
             
-            _logStyle.fontSize = 50;
+            _logStyle.fontSize = 30;
             GUI.Label(logRect, _lastLogText,_logStyle);
         }
     }
