@@ -23,139 +23,135 @@ namespace SyskenTLib.UtilForiOS.Demo
 
         public void OnTouchedDebugButton(int vibrateNum)
         {
+            VibrateType vibrateType = VibrateType.UI_HEAVY;
             switch (vibrateNum)
             {
                 case 0:
-                    _vibrateManager.PrepareVibrate(0,0);
-                    _vibrateManager.PlayVibrate(0,0,100);
+                    vibrateType = VibrateType.UI_HEAVY;
                     break;
                 case 1:
-                    _vibrateManager.PrepareVibrate(0,1);
-                    _vibrateManager.PlayVibrate(0,1,100);
+                    vibrateType = VibrateType.UI_LIGHT;
                     break;
                 case 2:
-                    _vibrateManager.PrepareVibrate(0,2);
-                    _vibrateManager.PlayVibrate(0,2,100);
+                    vibrateType = VibrateType.UI_MEDIUM;
                     break;
                 case 3:
-                    _vibrateManager.PrepareVibrate(0,3);
-                    _vibrateManager.PlayVibrate(0,3,100);
+                    vibrateType = VibrateType.UI_RIDID;
                     break;
                 case 4:
-                    _vibrateManager.PrepareVibrate(0,4);
-                    _vibrateManager.PlayVibrate(0,4,100);
+                    vibrateType = VibrateType.UI_SOFT;
                     break;
                 case 5:
-                    _vibrateManager.PrepareVibrate(1,0);
-                    _vibrateManager.PlayVibrate(1,0,100);
+                    vibrateType = VibrateType.UI_SELECT;
                     break;
                 case 6:
-                    _vibrateManager.PrepareVibrate(2,0);
-                    _vibrateManager.PlayVibrate(2,0,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_1;
                     break;
                 case 7:
-                    _vibrateManager.PrepareVibrate(2,0);
-                    _vibrateManager.PlayVibrate(2,1,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_2;
                     break;
                 case 8:
-                    _vibrateManager.PrepareVibrate(2,0);
-                    _vibrateManager.PlayVibrate(2,2,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_3;
                     break;
                 case 9:
-                    _vibrateManager.PlayVibrate(3,0,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_4;
                     break;
                 case 10:
-                    _vibrateManager.PlayVibrate(3,1,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_NORMAL_1;
                     break;
                 case 11:
-                    _vibrateManager.PlayVibrate(3,2,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_NORMAL_2;
                     break;
                 case 12:
-                    _vibrateManager.PlayVibrate(3,3,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_STRONG_1;
                     break;
                 case 13:
-                    _vibrateManager.PlayVibrate(3,4,100);
+                    vibrateType = VibrateType.CUSTOM_HEARTBEAT_STRONG_2;
                     break;
                 case 14:
-                    _vibrateManager.PlayVibrate(3,5,100);
+                    vibrateType = VibrateType.CUSTOM_GRADUALLY_1;
                     break;
                 case 15:
-                    _vibrateManager.PlayVibrate(3,6,100);
+                    vibrateType = VibrateType.CUSTOM_GRADUALLY_2;
                     break;
                 case 16:
-                    _vibrateManager.PlayVibrate(3,7,100);
+                    vibrateType = VibrateType.CUSTOM_KONKON_1;
                     break;
                 case 17:
-                    _vibrateManager.PlayVibrate(3,8,100);
+                    vibrateType = VibrateType.CUSTOM_KONKON_2;
                     break;
                 case 18:
-                    _vibrateManager.PlayVibrate(3,9,100);
+                    vibrateType = VibrateType.CUSTOM_ERROR_1;
                     break;
                 case 19:
-                    _vibrateManager.PlayVibrate(3,10,100);
+                    vibrateType = VibrateType.CUSTOM_ERROR_2;
                     break;
                 case 20:
-                    _vibrateManager.PlayVibrate(3,11,100);
+                    vibrateType = VibrateType.CUSTOM_ERROR_3;
                     break;
                 case 21:
-                    _vibrateManager.PlayVibrate(3,12,100);
+                    vibrateType = VibrateType.CUSTOM_ERROR_4;
                     break;
                 case 22:
-                    _vibrateManager.PlayVibrate(3,13,100);
+                    vibrateType = VibrateType.CUSTOM_ERROR_5;
                     break;
                 case 23:
-                    _vibrateManager.PlayVibrate(3,14,100);
+                    vibrateType = VibrateType.CUSTOM_WATER_1;
                     break;
                 case 24:
-                    _vibrateManager.PlayVibrate(3,15,100);
+                    vibrateType = VibrateType.CUSTOM_WATER_2;
                     break;
                 case 25:
-                    _vibrateManager.PlayVibrate(3,16,100);
+                    vibrateType = VibrateType.CUSTOM_WATER_3;
                     break;
                 case 26:
-                    _vibrateManager.PlayVibrate(3,17,100);
+                    vibrateType = VibrateType.CUSTOM_WATER_4;
                     break;
                 case 27:
-                    _vibrateManager.PlayVibrate(3,18,100);
+                    vibrateType = VibrateType.CUSTOM_WATER_5;
                     break;
                 case 28:
-                    _vibrateManager.PlayVibrate(3,19,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_1;
                     break;
                 case 29:
-                    _vibrateManager.PlayVibrate(3,20,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_2;
                     break;
                 case 30:
-                    _vibrateManager.PlayVibrate(3,21,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_3;
                     break;
                 case 31:
-                    _vibrateManager.PlayVibrate(3,22,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 32:
-                    _vibrateManager.PlayVibrate(3,23,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 33:
-                    _vibrateManager.PlayVibrate(3,24,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 34:
-                    _vibrateManager.PlayVibrate(3,25,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 35:
-                    _vibrateManager.PlayVibrate(3,26,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 36:
-                    _vibrateManager.PlayVibrate(3,27,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 37:
-                    _vibrateManager.PlayVibrate(3,28,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 38:
-                    _vibrateManager.PlayVibrate(3,29,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
                 case 39:
-                    _vibrateManager.PlayVibrate(3,30,100);
+                    vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
-
             }
+            
+            
+            Debug.Log("VibrateType: "+ vibrateType);
+            
+            _vibrateManager.Play(vibrateType);
         }
     }
 }
