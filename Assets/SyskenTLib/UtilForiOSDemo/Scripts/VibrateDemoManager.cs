@@ -8,18 +8,9 @@ namespace SyskenTLib.UtilForiOS.Demo
     public class VibrateDemoManager : MonoBehaviour
     {
         private VibrateManager _vibrateManager = new VibrateManager();
-        
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        private string _lastLogText = "";
+        private GUIStyle _logStyle = new GUIStyle();
 
         public void OnTouchedDebugButton(int vibrateNum)
         {
@@ -147,11 +138,18 @@ namespace SyskenTLib.UtilForiOS.Demo
                     vibrateType = VibrateType.CUSTOM_OTHER_4;
                     break;
             }
-            
-            
-            Debug.Log("VibrateType: "+ vibrateType);
+
+            _lastLogText = "VibrateType: " + vibrateType;
+            Debug.Log(_lastLogText);
             
             _vibrateManager.Play(vibrateType);
+        }
+        private void OnGUI()
+        {
+            Rect logRect = new Rect(40, 200, 800, 300);
+            
+            _logStyle.fontSize = 50;
+            GUI.Label(logRect, _lastLogText,_logStyle);
         }
     }
 }
