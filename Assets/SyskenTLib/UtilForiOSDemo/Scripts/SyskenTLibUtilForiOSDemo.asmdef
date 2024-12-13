@@ -8,12 +8,15 @@
         "GUID:24a66b129ab8843b4a619ffa41a51a11",
         "GUID:188ae5782c9cb4ba4a26ed7e20ac174b"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor",
+        "iOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

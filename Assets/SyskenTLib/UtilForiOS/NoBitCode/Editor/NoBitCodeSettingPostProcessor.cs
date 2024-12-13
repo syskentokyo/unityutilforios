@@ -1,13 +1,14 @@
+
+#if UNITY_EDITOR && UNITY_IOS
 using SyskenTLib.UtilForiOS.CommonConfig.Editor;
 using UnityEditor;
-using UnityEditor.Build;
-using UnityEditor.Build.Reporting;
 using UnityEditor.Callbacks;
 using UnityEngine;
+    
 
-#if UNITY_IOS
+
 using UnityEditor.iOS.Xcode;
-#endif
+
 
 
 namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
@@ -16,12 +17,13 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
     {
 
         
-        [PostProcessBuild]
+        [PostProcessBuild(1)]
         public static void OnPostProcessBuild(BuildTarget buildTarget, string path)
         {
 
             if (buildTarget == BuildTarget.iOS)
             {
+  
                 SaveDataManager saveDataManager = new SaveDataManager();
                 SyskenTLibUtilForiOSConfig config = saveDataManager.GetConfig();
 
@@ -29,10 +31,10 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
 
 
 
-                    string projectPath = path + "/Unity-iPhone.xcodeproj/project.pbxproj";
+                    string projectPath = PBXProject.GetPBXProjectPath(path);
                     PBXProject pbxProject = new PBXProject();
                     pbxProject.ReadFromFile(projectPath);
-
+                    
                     //Main
                     string target = pbxProject.GetUnityMainTargetGuid();
                     pbxProject.SetBuildProperty(target, "ENABLE_BITCODE", "NO");
@@ -48,8 +50,13 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
                     Debug.Log("BitCode Off");
 
                     pbxProject.WriteToFile(projectPath);
+     
+
                 }
+
             }
         }
     }
 }
+
+#endif

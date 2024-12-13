@@ -21,6 +21,7 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
 
             if (buildTarget == BuildTarget.iOS)
             {
+                #if UNITY_IOS
                 SaveDataManager saveDataManager = new SaveDataManager();
                 SyskenTLibUtilForiOSConfig config = saveDataManager.GetConfig();
 
@@ -87,6 +88,8 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
                 
                 //InfoPlist保存
                 File.WriteAllText(plistPath, plist.WriteToString());
+                
+                #endif
             }
         }
     }
