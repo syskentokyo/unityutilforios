@@ -37,9 +37,11 @@ namespace SyskenTLib.UtilForiOS.CustomFirstSplash.Editor
                     //
                     // SplashのiPhone用背景書き込み
                     //
-                    string splashSceneBackgroundForIphonePath = System.IO.Path.Combine(projectDirPath, "LaunchScreen-iPhonePortrait.png");
+                    string splashSceneBackgroundForIphonePortraitPath = System.IO.Path.Combine(projectDirPath, "LaunchScreen-iPhonePortrait.png");
+                    string splashSceneBackgroundForIphoneLandscapePath = System.IO.Path.Combine(projectDirPath, "LaunchScreen-iPhoneLandscape.png");
                     byte[] splashSceneBackgroundForIphoneBytes = config.iPhoneBackgroundImage.bytes;;
-                    System.IO.File.WriteAllBytes(splashSceneBackgroundForIphonePath, splashSceneBackgroundForIphoneBytes);
+                    System.IO.File.WriteAllBytes(splashSceneBackgroundForIphonePortraitPath, splashSceneBackgroundForIphoneBytes);
+                    System.IO.File.WriteAllBytes(splashSceneBackgroundForIphoneLandscapePath, splashSceneBackgroundForIphoneBytes);
                     
                     //
                     // SplashのiPad用背景書き込み
@@ -75,9 +77,14 @@ namespace SyskenTLib.UtilForiOS.CustomFirstSplash.Editor
                     PBXProject pbxProject = new PBXProject();
                     pbxProject.ReadFromFile(projectPath);
 
-                    pbxProject.AddFile(logoPath,"/appmainlogo.png");
+                    string appmainlogoGUID = pbxProject.AddFile(logoPath,"/appmainlogo.png", PBXSourceTree.Source );
+
+                    string targetGUID = pbxProject.GetUnityMainTargetGuid();
+                    pbxProject.AddFileToBuild( targetGUID, appmainlogoGUID );
                     
                     pbxProject.WriteToFile(projectPath);
+                    
+                    
      
 
                 }
