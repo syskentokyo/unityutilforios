@@ -5,9 +5,6 @@ namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
 
     public class SyskenTLibUtilForiOSInfoPlistConfig : ScriptableObject
     {
-        [Header("BitCode")]
-        public bool isAutoTurnOffBitCode = false;
-
 
         [Header("InfoPlist ")]
         [Header("Camera")]
