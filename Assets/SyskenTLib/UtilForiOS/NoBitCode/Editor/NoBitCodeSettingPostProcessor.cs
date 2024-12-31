@@ -1,6 +1,5 @@
 
 #if UNITY_EDITOR && UNITY_IOS
-using SyskenTLib.UtilForiOS.CommonConfig.Editor;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
@@ -25,7 +24,7 @@ namespace SyskenTLib.UtilForiOS.NoBitcodeEditor
             {
   
                 SaveDataManager saveDataManager = new SaveDataManager();
-                SyskenTLibUtilForiOSConfig config = saveDataManager.GetConfig();
+                SyskenTLibUtilForiOSNoBitCodeConfig config = saveDataManager.GetConfig();
 
                 if (config.isAutoTurnOffBitCode){
 

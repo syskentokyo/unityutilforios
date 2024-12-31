@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace SyskenTLib.UtilForiOS.CommonConfig.Editor
+namespace SyskenTLib.UtilForiOS.InfoPlistConfig.Editor
 {
 
-    public class SyskenTLibUtilForiOSConfig : ScriptableObject
+    public class SyskenTLibUtilForiOSInfoPlistConfig : ScriptableObject
     {
         [Header("BitCode")]
         public bool isAutoTurnOffBitCode = false;
