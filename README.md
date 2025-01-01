@@ -7,6 +7,9 @@ iOS用の細かい機能の集合ライブラリです
 
 # 機能一覧
 
+* CustomFirstSplash
+    * unityが出力したxcodeプロジェクトのsplashを上書きし、ロゴ画像を表示できます
+
 * noBitCode
     * ビルド時にBitCodeを自動でオフにする機能
 
