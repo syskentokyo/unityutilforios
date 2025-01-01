@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9c1095530e4f969fd7ceb5432651c6, type: 3}
   m_Name: SyskenTLibUtilForiOSCustomFirstSplashConfig
   m_EditorClassIdentifier: 
-  isEnableOverwriteSplash: 1
+  isEnableOverwriteSplash: 0
   splashLogImage: {fileID: 4900000, guid: cdda15100d89f44789527a862e06bff3, type: 3}
   iPhoneBackgroundImage: {fileID: 4900000, guid: 8180743d5c9544936b2a943de8fba488, type: 3}
   iPadBackgroundImage: {fileID: 4900000, guid: bb48cc508fff04c859ca96c480b64ebc, type: 3}
